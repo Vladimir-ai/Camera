@@ -8,7 +8,9 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -25,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         requestPermissions(REQUEST_PERMISSIONS, REQUEST_CODE);
+        FragmentManager fragManager = getSupportFragmentManager();
+        CameraFragment cameraFragment = (CameraFragment) fragManager.findFragmentById(R.id.camFragment);
+        cameraFragment.getFPSRanges();
     }
 
     @Override

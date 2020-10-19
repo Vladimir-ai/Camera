@@ -2,15 +2,14 @@ package com.example.camera;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -25,11 +24,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT)
+            setContentView(R.layout.activity_main_landscape);
+
         requestPermissions(REQUEST_PERMISSIONS, REQUEST_CODE);
+
         FragmentManager fragManager = getSupportFragmentManager();
         CameraFragment cameraFragment = (CameraFragment) fragManager.findFragmentById(R.id.camFragment);
-        cameraFragment.getFPSRanges();
+
     }
 
     @Override

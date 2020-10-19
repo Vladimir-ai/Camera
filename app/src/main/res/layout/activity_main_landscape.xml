@@ -10,11 +10,13 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    <fragment
-        android:name="com.example.camera.CameraFragment"
-        android:id="@+id/camFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+<!--    <fragment-->
+<!--        android:name="com.example.camera.CameraFragment"-->
+<!--        android:id="@+id/camFragment"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent" />-->
+        <include layout="@layout/camera_fragment"
+            android:id="@+id/camFragment"/>
     </RelativeLayout>
 
     <RelativeLayout

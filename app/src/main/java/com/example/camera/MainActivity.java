@@ -5,6 +5,7 @@ import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -31,7 +32,13 @@ public class MainActivity extends AppCompatActivity {
 
         FragmentManager fragManager = getSupportFragmentManager();
         CameraFragment cameraFragment = (CameraFragment) fragManager.findFragmentById(R.id.camFragment);
+        
+    }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
     }
 
     @Override

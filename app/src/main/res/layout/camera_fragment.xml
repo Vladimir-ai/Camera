@@ -3,10 +3,10 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
+    <SurfaceView
+        android:id="@+id/camSurface"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorPrimary"
-        android:text="AIII"/>
+        android:background="@color/colorPrimary" />
 
 </LinearLayout>

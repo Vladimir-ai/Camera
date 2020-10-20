@@ -3,17 +3,26 @@ package com.example.camera;
 import android.content.Context;
 import android.hardware.camera2.CameraAccessException;
 import android.hardware.camera2.CameraCharacteristics;
+import android.hardware.camera2.CameraDevice;
 import android.hardware.camera2.CameraManager;
+import android.hardware.camera2.CaptureRequest;
+import android.hardware.camera2.params.SessionConfiguration;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.Range;
 import android.view.LayoutInflater;
+import android.view.SurfaceControl;
+import android.view.SurfaceView;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewManager;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+
+import java.util.Arrays;
 
 public class CameraFragment extends Fragment {
     private static final String LOG_TAG = "Camera";
@@ -30,6 +39,7 @@ public class CameraFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.i(LOG_TAG, "View created");
+        FragmentManager fragManager = getFragmentManager();
         try{
             CameraManager manager = (CameraManager) getActivity().getSystemService(Context.CAMERA_SERVICE);
             String[] idList = manager.getCameraIdList();
@@ -42,6 +52,13 @@ public class CameraFragment extends Fragment {
                     break;
                 }
             }
+
+
+            SurfaceView camSurface = getView().findViewById(R.id.camSurface);
+            SurfaceControl sc = camSurface.getSurfaceControl();
+            //CaptureRequest.Builder builder = manager
+
+
 
 
         }catch (CameraAccessException e){

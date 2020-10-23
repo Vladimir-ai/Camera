@@ -25,7 +25,7 @@ import androidx.fragment.app.FragmentManager;
 import java.util.Arrays;
 
 public class CameraFragment extends Fragment {
-    private static final String LOG_TAG = "Camera";
+    private static final String LOG_TAG = "CameraFragment";
     private CameraCharacteristics camCharacterictics;
 
     @Nullable
@@ -59,8 +59,6 @@ public class CameraFragment extends Fragment {
             //CaptureRequest.Builder builder = manager
 
 
-
-
         }catch (CameraAccessException e){
             Log.e(LOG_TAG, "Can't access to camera");
         }
@@ -68,6 +66,8 @@ public class CameraFragment extends Fragment {
             Log.e(LOG_TAG, "Camera device is missing");
         }
     }
+
+
 
     public Range<Integer>[] getFPSRanges(){
         Range<Integer>[] result = camCharacterictics.get(CameraCharacteristics.CONTROL_AE_AVAILABLE_TARGET_FPS_RANGES);

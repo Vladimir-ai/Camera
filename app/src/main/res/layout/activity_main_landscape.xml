@@ -7,18 +7,21 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
+<!--        <include layout="@layout/camera_fragment"-->
+<!--            android:id="@+id/camFragment"/>-->
+<!--    </RelativeLayout>-->
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-<!--    <fragment-->
-<!--        android:name="com.example.camera.CameraFragment"-->
-<!--        android:id="@+id/camFragment"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent" />-->
-        <include layout="@layout/camera_fragment"
-            android:id="@+id/camFragment"/>
+        <TextureView
+            android:id="@+id/textureView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
     </RelativeLayout>
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -39,16 +42,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:text="backCam"
-                android:id="@+id/backCam"/>
+                android:text="open"
+                android:id="@+id/openCam"/>
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:text="takePict"
-                android:id="@+id/photo"/>
+                android:text="start record"
+                android:id="@+id/startRec"/>
 
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="stop record"
+                android:id="@+id/stopRec"/>
         </LinearLayout>
     </RelativeLayout>
 </FrameLayout>

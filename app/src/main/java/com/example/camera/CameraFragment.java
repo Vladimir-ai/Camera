@@ -3,10 +3,7 @@ package com.example.camera;
 import android.content.Context;
 import android.hardware.camera2.CameraAccessException;
 import android.hardware.camera2.CameraCharacteristics;
-import android.hardware.camera2.CameraDevice;
 import android.hardware.camera2.CameraManager;
-import android.hardware.camera2.CaptureRequest;
-import android.hardware.camera2.params.SessionConfiguration;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.Range;
@@ -15,14 +12,11 @@ import android.view.SurfaceControl;
 import android.view.SurfaceView;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewManager;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-
-import java.util.Arrays;
 
 public class CameraFragment extends Fragment {
     private static final String LOG_TAG = "CameraFragment";

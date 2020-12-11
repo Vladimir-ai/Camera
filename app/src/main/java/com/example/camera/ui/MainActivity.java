@@ -1,13 +1,15 @@
-package com.example.camera;
+package com.example.camera.ui;
 
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.camera.R;
 
 
 public class MainActivity extends AppCompatActivity {
+
 
     public static final String LOG_TAG = "myLogs";
 

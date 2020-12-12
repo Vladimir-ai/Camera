@@ -7,14 +7,17 @@
     android:orientation="vertical"
     tools:context=".ui.MainActivity">
 
-    <androidx.camera.view.PreviewView
-        android:id="@+id/previewView"
+    <androidx.camera.view.CameraView
+        android:id="@+id/cameraView"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        app:captureMode="mixed"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:lensFacing="back"
+        app:pinchToZoomEnabled="false" />
 
     <Button
         android:id="@+id/buttonRecordVideo"
